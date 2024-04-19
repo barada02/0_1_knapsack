@@ -61,6 +61,11 @@ namespace knapsack {
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::PictureBox^ pictureBox7;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::Label^ label15;
 
 	private:
 		/// <summary>
@@ -77,6 +82,9 @@ namespace knapsack {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Base::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
@@ -96,23 +104,31 @@ namespace knapsack {
 			this->Capacity_textbox = (gcnew System::Windows::Forms::TextBox());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->panel2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::PaleTurquoise;
+			this->panel1->Controls->Add(this->label16);
+			this->panel1->Controls->Add(this->label15);
+			this->panel1->Controls->Add(this->label14);
+			this->panel1->Controls->Add(this->label13);
+			this->panel1->Controls->Add(this->pictureBox7);
 			this->panel1->Controls->Add(this->label10);
 			this->panel1->Controls->Add(this->label9);
 			this->panel1->Controls->Add(this->label8);
@@ -135,9 +151,40 @@ namespace knapsack {
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1382, 533);
+			this->panel1->Size = System::Drawing::Size(1260, 533);
 			this->panel1->TabIndex = 0;
-			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Base::panel1_Paint);
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label14->Location = System::Drawing::Point(942, 161);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(72, 31);
+			this->label14->TabIndex = 20;
+			this->label14->Text = L"V: 70";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label13->Location = System::Drawing::Point(942, 116);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(67, 31);
+			this->label13->TabIndex = 19;
+			this->label13->Text = L"W: 4";
+			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(945, 36);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(64, 64);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox7->TabIndex = 18;
+			this->pictureBox7->TabStop = false;
 			// 
 			// label10
 			// 
@@ -146,9 +193,9 @@ namespace knapsack {
 				static_cast<System::Byte>(0)));
 			this->label10->Location = System::Drawing::Point(824, 161);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(71, 31);
+			this->label10->Size = System::Drawing::Size(72, 31);
 			this->label10->TabIndex = 17;
-			this->label10->Text = L"P: 20";
+			this->label10->Text = L"V: 40";
 			// 
 			// label9
 			// 
@@ -157,9 +204,9 @@ namespace knapsack {
 				static_cast<System::Byte>(0)));
 			this->label9->Location = System::Drawing::Point(669, 161);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(71, 31);
+			this->label9->Size = System::Drawing::Size(72, 31);
 			this->label9->TabIndex = 16;
-			this->label9->Text = L"P: 20";
+			this->label9->Text = L"V: 60";
 			// 
 			// label8
 			// 
@@ -168,9 +215,9 @@ namespace knapsack {
 				static_cast<System::Byte>(0)));
 			this->label8->Location = System::Drawing::Point(551, 161);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(71, 31);
+			this->label8->Size = System::Drawing::Size(86, 31);
 			this->label8->TabIndex = 15;
-			this->label8->Text = L"P: 20";
+			this->label8->Text = L"V: 150";
 			// 
 			// label7
 			// 
@@ -181,7 +228,7 @@ namespace knapsack {
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(67, 31);
 			this->label7->TabIndex = 14;
-			this->label7->Text = L"W: 9";
+			this->label7->Text = L"W: 2";
 			// 
 			// label6
 			// 
@@ -192,7 +239,7 @@ namespace knapsack {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(67, 31);
 			this->label6->TabIndex = 13;
-			this->label6->Text = L"W: 9";
+			this->label6->Text = L"W: 2";
 			// 
 			// label5
 			// 
@@ -203,7 +250,7 @@ namespace knapsack {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(67, 31);
 			this->label5->TabIndex = 12;
-			this->label5->Text = L"W: 9";
+			this->label5->Text = L"W: 3";
 			// 
 			// label4
 			// 
@@ -212,9 +259,9 @@ namespace knapsack {
 				static_cast<System::Byte>(0)));
 			this->label4->Location = System::Drawing::Point(356, 161);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(71, 31);
+			this->label4->Size = System::Drawing::Size(86, 31);
 			this->label4->TabIndex = 11;
-			this->label4->Text = L"P: 20";
+			this->label4->Text = L"V: 700";
 			// 
 			// label3
 			// 
@@ -225,7 +272,7 @@ namespace knapsack {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(67, 31);
 			this->label3->TabIndex = 10;
-			this->label3->Text = L"W: 9";
+			this->label3->Text = L"W: 5";
 			// 
 			// pictureBox6
 			// 
@@ -324,7 +371,7 @@ namespace knapsack {
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::Color::SeaGreen;
-			this->panel3->Location = System::Drawing::Point(210, 195);
+			this->panel3->Location = System::Drawing::Point(217, 210);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(1172, 10);
 			this->panel3->TabIndex = 1;
@@ -341,7 +388,16 @@ namespace knapsack {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(211, 533);
 			this->panel2->TabIndex = 0;
-			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Base::panel2_Paint);
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(65, 433);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(64, 64);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
+			this->pictureBox2->TabIndex = 20;
+			this->pictureBox2->TabStop = false;
 			// 
 			// label12
 			// 
@@ -376,42 +432,54 @@ namespace knapsack {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &Base::pictureBox1_Click);
 			// 
-			// pictureBox2
+			// label15
 			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(65, 433);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(64, 64);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox2->TabIndex = 20;
-			this->pictureBox2->TabStop = false;
+			this->label15->AutoSize = true;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label15->Location = System::Drawing::Point(1026, 116);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(207, 31);
+			this->label15->TabIndex = 21;
+			this->label15->Text = L"Total Weight: 16";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label16->Location = System::Drawing::Point(1026, 161);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(214, 31);
+			this->label16->TabIndex = 22;
+			this->label16->Text = L"Total Value: 1020";
 			// 
 			// Base
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1382, 533);
+			this->ClientSize = System::Drawing::Size(1260, 533);
 			this->Controls->Add(this->panel1);
 			this->Name = L"Base";
 			this->Text = L"Base";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 
-		// Function to perform the Knapsack calculation
+		// Method to perform the Knapsack calculation
 		int knapsack(int W, array<int>^ wt, array<int>^ val, int n) {
 			array<array<int>^>^ K = gcnew array<array<int>^>(n + 1);
 			for (int i = 0; i <= n; i++) {
@@ -433,29 +501,22 @@ namespace knapsack {
 		}
 
 
-	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-
-
 	private: System::Void Kanpsack_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		int capacity = System::Convert::ToInt32(Capacity_textbox->Text);
 
-		// Example data (you should replace this with your actual data)
-		array<int>^ weights = { 9, 3, 4, 7 };
-		array<int>^ values = { 30, 40, 50, 60 };
+		
+		array<int>^ weights = { 5, 3, 2, 2,4 };
+		array<int>^ values = { 700, 150, 60, 40,70 };
 		int n = weights->Length;
 
-		// Perform Knapsack calculation (you should replace this with your actual Knapsack algorithm implementation)
+		
 		int result = knapsack(capacity, weights, values, n);
 
-		// Update the label with the result
 		knapsackValue_label->Text = "Knapsack Value: " + result.ToString();
 	}
-private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 
-}
-private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
+
+
 
 };
 }
