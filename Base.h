@@ -8,6 +8,7 @@ namespace knapsack {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Collections::Generic;
 
 	/// <summary>
 	/// Summary for Base
@@ -501,6 +502,41 @@ namespace knapsack {
 		}
 
 
+		
+
+		array<int>^ FindValues(array<int>^ values, int target) {
+			array<int>^ resultValues = gcnew array<int>(values->Length); // Initialize result array with the same size as values
+			List<int>^ sortedValues = gcnew List<int>(values); // Convert values to a List for sorting
+			sortedValues->Sort(); // Sort the list in ascending order
+			sortedValues->Reverse();
+
+			int index = 0;
+			// Loop through each value in the sorted array
+			for each (int val in sortedValues) {
+				// Check if the current value is less than or equal to the remaining target
+				if (val <= target) {
+					// Subtract the current value from the target
+					target -= val;
+					// Store the current value in the result array
+					resultValues[index++] = val;
+				}
+				if (target == 0){
+					break;
+			}
+			}
+
+			return resultValues;
+		}
+
+		void ShowProductMessage(int val) {
+			// Create the message string
+			String^ message = "You chose a product of " + val + " rupees.";
+
+			// Show the popup message
+			MessageBox::Show(message, "Product Selection", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+
+
 	private: System::Void Kanpsack_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		int capacity = System::Convert::ToInt32(Capacity_textbox->Text);
 
@@ -513,6 +549,18 @@ namespace knapsack {
 		int result = knapsack(capacity, weights, values, n);
 
 		knapsackValue_label->Text = "Knapsack Value: " + result.ToString();
+
+
+		array<int>^ resultValues = FindValues(values, result);
+
+		for each (int val in resultValues) {
+			
+				if (val != 0){
+					ShowProductMessage(val); }
+					
+		
+		}
+
 	}
 
 
