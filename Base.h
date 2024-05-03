@@ -83,6 +83,8 @@ namespace knapsack {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Base::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
@@ -109,8 +111,6 @@ namespace knapsack {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
@@ -154,6 +154,28 @@ namespace knapsack {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1260, 533);
 			this->panel1->TabIndex = 0;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label16->Location = System::Drawing::Point(1026, 161);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(214, 31);
+			this->label16->TabIndex = 22;
+			this->label16->Text = L"Total Value: 1020";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label15->Location = System::Drawing::Point(1026, 116);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(207, 31);
+			this->label15->TabIndex = 21;
+			this->label15->Text = L"Total Weight: 16";
 			// 
 			// label14
 			// 
@@ -258,7 +280,7 @@ namespace knapsack {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(356, 161);
+			this->label4->Location = System::Drawing::Point(371, 161);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(86, 31);
 			this->label4->TabIndex = 11;
@@ -269,7 +291,7 @@ namespace knapsack {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(356, 116);
+			this->label3->Location = System::Drawing::Point(371, 116);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(67, 31);
 			this->label3->TabIndex = 10;
@@ -433,28 +455,6 @@ namespace knapsack {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
-			// 
-			// label15
-			// 
-			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(1026, 116);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(207, 31);
-			this->label15->TabIndex = 21;
-			this->label15->Text = L"Total Weight: 16";
-			// 
-			// label16
-			// 
-			this->label16->AutoSize = true;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label16->Location = System::Drawing::Point(1026, 161);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(214, 31);
-			this->label16->TabIndex = 22;
-			this->label16->Text = L"Total Value: 1020";
 			// 
 			// Base
 			// 
