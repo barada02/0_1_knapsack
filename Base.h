@@ -87,6 +87,8 @@ namespace knapsack {
 	private: System::Windows::Forms::Panel^ panel9;
 
 	private: System::Windows::Forms::Button^ animation_button;
+	private: System::Windows::Forms::PictureBox^ newUser_pictureBox;
+
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -137,6 +139,7 @@ namespace knapsack {
 			this->Capacity_textbox = (gcnew System::Windows::Forms::TextBox());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->newUser_pictureBox = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
@@ -153,6 +156,7 @@ namespace knapsack {
 			this->laptop_panel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->panel2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->newUser_pictureBox))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
@@ -521,6 +525,7 @@ namespace knapsack {
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::Teal;
+			this->panel2->Controls->Add(this->newUser_pictureBox);
 			this->panel2->Controls->Add(this->pictureBox2);
 			this->panel2->Controls->Add(this->label12);
 			this->panel2->Controls->Add(this->label11);
@@ -530,6 +535,17 @@ namespace knapsack {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(211, 787);
 			this->panel2->TabIndex = 0;
+			// 
+			// newUser_pictureBox
+			// 
+			this->newUser_pictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"newUser_pictureBox.Image")));
+			this->newUser_pictureBox->Location = System::Drawing::Point(40, 627);
+			this->newUser_pictureBox->Name = L"newUser_pictureBox";
+			this->newUser_pictureBox->Size = System::Drawing::Size(100, 120);
+			this->newUser_pictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->newUser_pictureBox->TabIndex = 24;
+			this->newUser_pictureBox->TabStop = false;
+			this->newUser_pictureBox->Click += gcnew System::EventHandler(this, &Base::newUser_pictureBox_Click);
 			// 
 			// pictureBox2
 			// 
@@ -602,6 +618,7 @@ namespace knapsack {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->newUser_pictureBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
@@ -713,6 +730,7 @@ namespace knapsack {
 					Animation^ animation = gcnew Animation(productPanel, bottom_panel);
 					animation->drop_timer->Tag = productPanel;
 					animation->drop_timer->Start();
+					
 				}
 			}
 
@@ -745,5 +763,14 @@ namespace knapsack {
 
 
 
-	};
+	
+
+private: System::Void newUser_pictureBox_Click(System::Object^ sender, System::EventArgs^ e) {
+	Application::Exit();
+
+	// Start a new instance of the application
+	System::Diagnostics::Process::Start(Application::ExecutablePath);
+}
+	   
+};
 }
