@@ -39,7 +39,7 @@ namespace knapsack {
 	protected:
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::Panel^ panel2;
-	private: System::Windows::Forms::Panel^ panel3;
+
 
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ knapsackValue_label;
@@ -61,7 +61,7 @@ namespace knapsack {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::PictureBox^ pictureBox2;
+
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
@@ -83,11 +83,13 @@ namespace knapsack {
 
 
 
-	private: System::Windows::Forms::Panel^ panel10;
+
 	private: System::Windows::Forms::Panel^ panel9;
 
-	private: System::Windows::Forms::Button^ animation_button;
+
 	private: System::Windows::Forms::PictureBox^ newUser_pictureBox;
+	private: System::Windows::Forms::Panel^ panel4;
+	private: System::Windows::Forms::Panel^ panel3;
 
 	private: System::ComponentModel::IContainer^ components;
 
@@ -106,9 +108,7 @@ namespace knapsack {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Base::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->animation_button = (gcnew System::Windows::Forms::Button());
 			this->bottom_panel = (gcnew System::Windows::Forms::Panel());
-			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
 			this->headphone_panel = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
@@ -137,13 +137,13 @@ namespace knapsack {
 			this->knapsackValue_label = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->Capacity_textbox = (gcnew System::Windows::Forms::TextBox());
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->newUser_pictureBox = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			this->headphone_panel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
@@ -157,16 +157,15 @@ namespace knapsack {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->panel2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->newUser_pictureBox))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::PaleTurquoise;
-			this->panel1->Controls->Add(this->animation_button);
+			this->panel1->Controls->Add(this->panel3);
+			this->panel1->Controls->Add(this->panel4);
 			this->panel1->Controls->Add(this->bottom_panel);
-			this->panel1->Controls->Add(this->panel10);
 			this->panel1->Controls->Add(this->panel9);
 			this->panel1->Controls->Add(this->headphone_panel);
 			this->panel1->Controls->Add(this->shoes_panel);
@@ -180,52 +179,36 @@ namespace knapsack {
 			this->panel1->Controls->Add(this->knapsackValue_label);
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Controls->Add(this->Capacity_textbox);
-			this->panel1->Controls->Add(this->panel3);
 			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1786, 787);
+			this->panel1->Size = System::Drawing::Size(1924, 861);
 			this->panel1->TabIndex = 0;
-			// 
-			// animation_button
-			// 
-			this->animation_button->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->animation_button->Location = System::Drawing::Point(990, 40);
-			this->animation_button->Name = L"animation_button";
-			this->animation_button->Size = System::Drawing::Size(110, 42);
-			this->animation_button->TabIndex = 23;
-			this->animation_button->Text = L"Max Value";
-			this->animation_button->UseVisualStyleBackColor = true;
 			// 
 			// bottom_panel
 			// 
-			this->bottom_panel->BackColor = System::Drawing::Color::SeaGreen;
-			this->bottom_panel->Location = System::Drawing::Point(1012, 608);
+			this->bottom_panel->BackColor = System::Drawing::Color::Transparent;
+			this->bottom_panel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bottom_panel.BackgroundImage")));
+			this->bottom_panel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bottom_panel->Location = System::Drawing::Point(1015, 682);
 			this->bottom_panel->Name = L"bottom_panel";
-			this->bottom_panel->Size = System::Drawing::Size(759, 27);
+			this->bottom_panel->Size = System::Drawing::Size(894, 105);
 			this->bottom_panel->TabIndex = 3;
-			// 
-			// panel10
-			// 
-			this->panel10->BackColor = System::Drawing::Color::SeaGreen;
-			this->panel10->Location = System::Drawing::Point(1749, 312);
-			this->panel10->Name = L"panel10";
-			this->panel10->Size = System::Drawing::Size(25, 323);
-			this->panel10->TabIndex = 3;
 			// 
 			// panel9
 			// 
 			this->panel9->BackColor = System::Drawing::Color::SeaGreen;
-			this->panel9->Location = System::Drawing::Point(990, 312);
+			this->panel9->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel9.BackgroundImage")));
+			this->panel9->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel9->Location = System::Drawing::Point(990, 415);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(25, 323);
+			this->panel9->Size = System::Drawing::Size(25, 393);
 			this->panel9->TabIndex = 2;
 			// 
 			// headphone_panel
 			// 
-			this->headphone_panel->BackColor = System::Drawing::Color::Snow;
+			this->headphone_panel->BackColor = System::Drawing::Color::Transparent;
 			this->headphone_panel->Controls->Add(this->pictureBox7);
 			this->headphone_panel->Controls->Add(this->label13);
 			this->headphone_panel->Controls->Add(this->label14);
@@ -268,7 +251,7 @@ namespace knapsack {
 			// 
 			// shoes_panel
 			// 
-			this->shoes_panel->BackColor = System::Drawing::Color::Snow;
+			this->shoes_panel->BackColor = System::Drawing::Color::Transparent;
 			this->shoes_panel->Controls->Add(this->label17);
 			this->shoes_panel->Controls->Add(this->label10);
 			this->shoes_panel->Controls->Add(this->pictureBox6);
@@ -311,7 +294,7 @@ namespace knapsack {
 			// 
 			// watch_panel
 			// 
-			this->watch_panel->BackColor = System::Drawing::Color::Snow;
+			this->watch_panel->BackColor = System::Drawing::Color::Transparent;
 			this->watch_panel->Controls->Add(this->pictureBox4);
 			this->watch_panel->Controls->Add(this->label6);
 			this->watch_panel->Controls->Add(this->label9);
@@ -354,7 +337,7 @@ namespace knapsack {
 			// 
 			// mouse_panel
 			// 
-			this->mouse_panel->BackColor = System::Drawing::Color::Snow;
+			this->mouse_panel->BackColor = System::Drawing::Color::Transparent;
 			this->mouse_panel->Controls->Add(this->pictureBox5);
 			this->mouse_panel->Controls->Add(this->label5);
 			this->mouse_panel->Controls->Add(this->label8);
@@ -397,7 +380,7 @@ namespace knapsack {
 			// 
 			// laptop_panel
 			// 
-			this->laptop_panel->BackColor = System::Drawing::Color::Snow;
+			this->laptop_panel->BackColor = System::Drawing::Color::Transparent;
 			this->laptop_panel->Controls->Add(this->pictureBox3);
 			this->laptop_panel->Controls->Add(this->label3);
 			this->laptop_panel->Controls->Add(this->label4);
@@ -443,7 +426,7 @@ namespace knapsack {
 			this->label16->AutoSize = true;
 			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label16->Location = System::Drawing::Point(1390, 51);
+			this->label16->Location = System::Drawing::Point(1310, 51);
 			this->label16->Name = L"label16";
 			this->label16->Size = System::Drawing::Size(214, 31);
 			this->label16->TabIndex = 22;
@@ -454,7 +437,7 @@ namespace knapsack {
 			this->label15->AutoSize = true;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label15->Location = System::Drawing::Point(1373, 25);
+			this->label15->Location = System::Drawing::Point(1052, 51);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(207, 31);
 			this->label15->TabIndex = 21;
@@ -488,7 +471,7 @@ namespace knapsack {
 			this->knapsackValue_label->AutoSize = true;
 			this->knapsackValue_label->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->knapsackValue_label->Location = System::Drawing::Point(685, 217);
+			this->knapsackValue_label->Location = System::Drawing::Point(629, 220);
 			this->knapsackValue_label->Name = L"knapsackValue_label";
 			this->knapsackValue_label->Size = System::Drawing::Size(194, 31);
 			this->knapsackValue_label->TabIndex = 4;
@@ -499,7 +482,7 @@ namespace knapsack {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(283, 217);
+			this->label1->Location = System::Drawing::Point(250, 217);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(373, 31);
 			this->label1->TabIndex = 3;
@@ -514,48 +497,29 @@ namespace knapsack {
 			this->Capacity_textbox->Size = System::Drawing::Size(110, 30);
 			this->Capacity_textbox->TabIndex = 2;
 			// 
-			// panel3
-			// 
-			this->panel3->BackColor = System::Drawing::Color::SeaGreen;
-			this->panel3->Location = System::Drawing::Point(900, 3);
-			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(43, 641);
-			this->panel3->TabIndex = 1;
-			// 
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::Teal;
 			this->panel2->Controls->Add(this->newUser_pictureBox);
-			this->panel2->Controls->Add(this->pictureBox2);
 			this->panel2->Controls->Add(this->label12);
 			this->panel2->Controls->Add(this->label11);
 			this->panel2->Controls->Add(this->pictureBox1);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel2->Location = System::Drawing::Point(0, 0);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(211, 787);
+			this->panel2->Size = System::Drawing::Size(211, 861);
 			this->panel2->TabIndex = 0;
 			// 
 			// newUser_pictureBox
 			// 
 			this->newUser_pictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"newUser_pictureBox.Image")));
-			this->newUser_pictureBox->Location = System::Drawing::Point(40, 627);
+			this->newUser_pictureBox->Location = System::Drawing::Point(25, 692);
 			this->newUser_pictureBox->Name = L"newUser_pictureBox";
-			this->newUser_pictureBox->Size = System::Drawing::Size(100, 120);
+			this->newUser_pictureBox->Size = System::Drawing::Size(149, 157);
 			this->newUser_pictureBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->newUser_pictureBox->TabIndex = 24;
 			this->newUser_pictureBox->TabStop = false;
 			this->newUser_pictureBox->Click += gcnew System::EventHandler(this, &Base::newUser_pictureBox_Click);
-			// 
-			// pictureBox2
-			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(65, 433);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(64, 64);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-			this->pictureBox2->TabIndex = 20;
-			this->pictureBox2->TabStop = false;
 			// 
 			// label12
 			// 
@@ -591,12 +555,32 @@ namespace knapsack {
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
+			// panel4
+			// 
+			this->panel4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(27)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->panel4->Location = System::Drawing::Point(1015, 781);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(897, 27);
+			this->panel4->TabIndex = 4;
+			// 
+			// panel3
+			// 
+			this->panel3->BackColor = System::Drawing::Color::SeaGreen;
+			this->panel3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel3.BackgroundImage")));
+			this->panel3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel3->Location = System::Drawing::Point(1898, 415);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(23, 393);
+			this->panel3->TabIndex = 3;
+			// 
 			// Base
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1786, 787);
+			this->ClientSize = System::Drawing::Size(1924, 861);
 			this->Controls->Add(this->panel1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"Base";
 			this->Text = L"Base";
 			this->panel1->ResumeLayout(false);
@@ -619,7 +603,6 @@ namespace knapsack {
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->newUser_pictureBox))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
