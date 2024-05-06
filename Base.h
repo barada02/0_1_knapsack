@@ -725,6 +725,11 @@ namespace knapsack {
 
 	private: System::Void Kanpsack_button_Click(System::Object^ sender, System::EventArgs^ e) {
 		int capacity = System::Convert::ToInt32(Capacity_textbox->Text);
+		if (capacity < 2) {
+			MessageBox::Show("Your bag's capacity is less than the minimum weight of available product.", "Inefficient Knapsac capacity", MessageBoxButtons::OK, MessageBoxIcon::Error);
+
+
+		}
 
 
 		array<int>^ weights = { 5, 3, 2, 2,4 };
